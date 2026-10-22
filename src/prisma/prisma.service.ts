@@ -12,6 +12,7 @@ export class PrismaService
     const adapter = new PrismaPg({
       connectionString: configService.getOrThrow('DATABASE_URL'),
     });
+
     super({ adapter });
   }
 
