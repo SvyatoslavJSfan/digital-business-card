@@ -1,7 +1,7 @@
 import { Args, Query, Resolver } from '@nestjs/graphql';
 import { Profile } from './models/profile.model';
 import { ProfileService } from './profile.service';
-import { SlugValidationPipe } from 'src/common/pipes/slug-validation.pipe';
+import { SlugValidationPipe } from '../common/pipes/slug-validation.pipe';
 
 @Resolver()
 export class ProfileResolver {
