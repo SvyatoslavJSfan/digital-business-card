@@ -1,0 +1,42 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Skill {
+  name: String!
+  level: SkillLevel!
+}
+
+"""The level of proficiency in a skill"""
+enum SkillLevel {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+}
+
+type Experience {
+  company: String!
+  position: String!
+  description: String!
+  startDate: String!
+  endDate: String
+}
+
+type Project {
+  title: String!
+  description: String!
+  repositoryUrl: String
+  demoUrl: String
+}
+
+type Profile {
+  name: String!
+  description: String!
+  skills: [Skill!]!
+  experience: [Experience!]!
+  projects: [Project!]!
+}
+
+type Query {
+  getProfile(slug: String!): Profile
+}
